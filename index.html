@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KATHI HARSHITH REDDY | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/umd/lucide.min.js"></script>
+    <style>
+        :root {
+            --bg-warm: #faf7f2;
+            --accent-gold: #c8922a;
+            --accent-terracotta: #b85c38;
+            --text-dark: #1c1a16;
+            --text-muted: #5c5852;
+            --card-white: #ffffff;
+            --section-dark: #1c1a16;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(250, 247, 242, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(200, 146, 42, 0.1);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-gold);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #b08125;
+            transform: translateY(-2px);
+        }
+
+        /* Skills Grid */
+        .skills {
+            padding: 8rem 10%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: var(--card-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-left: 4px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            border-left: 4px solid var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--section-dark);
+            color: white;
+            padding: 8rem 10%;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .contact-item {
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .contact-item i {
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            background: var(--section-dark);
+            color: rgba(255,255,255,0.5);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 3rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">KHR</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span style="color: var(--accent-terracotta); font-weight: 700; letter-spacing: 2px;">ETHICAL HACKER & DEVELOPER</span>
+            <h1>KATHI<br>HARSHITH REDDY</h1>
+            <p>Bridging the gap between robust Full Stack Development and high-level Cyber Security. Specializing in Python, SQL, and AI-driven security solutions.</p>
+            <a href="#contact" class="btn btn-primary">Work With Me</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i data-lucide="shield-check"></i>
+                <h3>Ethical Hacking</h3>
+                <p>Penetration testing, vulnerability assessment, and securing network infrastructures.</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="code-2"></i>
+                <h3>Python Development</h3>
+                <p>Automation scripts, security tools, and backend architecture with a focus on efficiency.</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="database"></i>
+                <h3>SQL & Data</h3>
+                <p>Database management, complex querying, and ensuring data integrity and security.</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="layers"></i>
+                <h3>Full Stack</h3>
+                <p>Building end-to-end applications with modern frameworks and responsive design.</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="cpu"></i>
+                <h3>AI & ML</h3>
+                <p>Integrating artificial intelligence into security protocols and predictive modeling.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title" style="color: white;">Let's Connect</h2>
+        <p>I am currently available for security audits and development projects.</p>
+        
+        <div class="contact-grid">
+            <a href="mailto:kathiharshithreddy@gmail.com" class="contact-item">
+                <i data-lucide="mail"></i>
+                <span>kathiharshithreddy@gmail.com</span>
+            </a>
+            <a href="https://github.com/kathiHarshithReddy" target="_blank" class="contact-item">
+                <i data-lucide="github"></i>
+                <span>github.com/kathiHarshithReddy</span>
+            </a>
+            <a href="#" class="contact-item">
+                <i data-lucide="linkedin"></i>
+                <span>LinkedIn Profile</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 KATHI HARSHITH REDDY. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
